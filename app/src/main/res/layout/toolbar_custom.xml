@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="changeIcon"
+            type="Boolean" />
+
+        <variable
+            name="notificationCount"
+            type="String" />
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/iv_back"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_alignParentLeft="true"
+               android:layout_centerVertical="true"
+               android:layout_gravity="center"
+               android:padding="@dimen/_5sdp"
+               app:srcCompat="@drawable/ic_back_icon"
+               android:layout_marginStart="@dimen/_10sdp"
+               android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_main_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/iv_back"
+                android:autoSizeTextType="uniform"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:layout_margin="@dimen/_10sdp"
+                app:srcCompat="@drawable/ic_ryanair_logo_yellow"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+</layout>

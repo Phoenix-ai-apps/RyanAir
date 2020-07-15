@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.HomeActivity">
+
+        <include
+            android:id="@+id/inc_toolbar"
+            layout="@layout/toolbar_custom"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_station"
+            android:layout_below="@+id/inc_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+</layout>

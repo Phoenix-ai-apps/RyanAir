@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RyanAir</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="where_from">Where from?</string>
+    <string name="where_to">Where to?</string>
+    <string name="lets_go">Let\'s go</string>
+    <string name="fly_out">Fly Out</string>
+    <string name="select_date">Select Date</string>
+    <string name="search_city_or_airport">Search city or airport</string>
+    <string name="select_origin">Search your origin</string>
+    <string name="select_destination">Search your destination</string>
+    <string name="passengers">Passengers</string>
+    <string name="adult_1_16_years">1 Adult (16+ years)</string>
+    <string name="loading_please_wait">Processing your request please wait</string>
+    <string name="no_internet">No Internet!</string>
+    <string name="no_internet_msg">Please connect to internet and try again.</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="something_went_wrong">Something went wrong. Try again.</string>
+</resources>

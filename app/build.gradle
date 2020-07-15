@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        applicationId "com.example.ryanair"
+        versionCode 1      // Increment every time with App Release
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix "1.0.0"
+            debuggable true
+            minifyEnabled false
+        }
+        release {
+            versionNameSuffix "1.0.0"
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == "androidx") {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion "${targetSdk}.+"
+                }
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Espresso UI Testing
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.intents
+
+    // Architecture components
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.cardview
+    implementation deps.constraint_layout
+    implementation deps.support.design
+    implementation deps.work.playServices
+
+    // Third Party Libraries
+    implementation deps.thirdParty.gson
+    implementation deps.thirdParty.sdp
+    implementation deps.thirdParty.glideRuntime
+    annotationProcessor deps.thirdParty.glideCompiler
+    implementation deps.thirdParty.lottieFiles
+    implementation deps.thirdParty.retrofit2
+    implementation deps.thirdParty.retrofit2Gson
+    implementation deps.thirdParty.retrofit2RxJava
+    implementation deps.thirdParty.retrofit2Scalars
+    implementation deps.thirdParty.okhttpInterceptor
+
+
+}
