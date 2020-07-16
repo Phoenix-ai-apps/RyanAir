@@ -38,7 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HelperIn
             appExecutors = new AppExecutors();
         }
         if (apiInterface == null){
-            apiInterface  = ApiUtils.getApiService();
+            apiInterface  = ApiUtils.getApiService(false);
         }
     }
 

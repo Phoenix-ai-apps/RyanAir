@@ -6,9 +6,9 @@ import android.os.Parcelable;
 import java.util.List;
 
 public class FlightDetails implements Parcelable {
-     private int faresLeft;
+     private int    faresLeft;
      private String flightKey;
-     private int infantsLeft;
+     private int    infantsLeft;
      private RegularFare regularFare;
      private String operatedBy;
      private List<Segment> segments;

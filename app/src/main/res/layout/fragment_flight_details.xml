@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="origin"
+            type="String" />
+        <variable
+            name="destination"
+            type="String" />
+        <variable
+            name="infantLeft"
+            type="String" />
+        <variable
+            name="fareClass"
+            type="String" />
+        <variable
+            name="discountPer"
+            type="String" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_200"
+            android:padding="@dimen/_15sdp"
+            tools:context=".ui.fragments.flightDetailsFragment.FlightDetailsFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_summary"
+                android:text="@string/ticket_summary"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_origin"
+                android:layout_below="@+id/tv_summary"
+                android:text="@string/origin"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey_700"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_origin_val"
+                android:layout_below="@+id/tv_origin"
+                android:text='@{origin}'
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_destination"
+                android:layout_below="@+id/tv_summary"
+                android:text="@string/destination"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey_700"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_destination_val"
+                android:layout_below="@+id/tv_destination"
+                android:text='@{destination}'
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infant"
+                android:layout_below="@+id/tv_origin_val"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/infant_left"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey_700"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infant_val"
+                android:layout_below="@+id/tv_infant"
+                android:text='@{infantLeft}'
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_fare_class"
+                android:layout_below="@+id/tv_destination_val"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/fare_class"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey_700"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_fare_class_val"
+                android:layout_below="@+id/tv_fare_class"
+                android:text='@{fareClass}'
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_discount_per"
+                android:layout_below="@+id/tv_infant_val"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/discount_percent"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey_700"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_discount_per_val"
+                android:layout_below="@+id/tv_discount_per"
+                android:text='@{discountPer+" %"}'
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

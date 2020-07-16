@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +31,9 @@ public class DialogUtils implements AppConstants {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         DialogPleaseWaitBinding binding =
                 DataBindingUtil.inflate(inflater, R.layout.dialog_please_wait, null, false);
-        binding.tvMessage.setText(msg);
+        if(!TextUtils.isEmpty(msg)){
+            binding.tvMessage.setText(msg);
+        }
         alert.setCancelable(false);
         alert.setCanceledOnTouchOutside(false);
         alert.requestWindowFeature(Window.FEATURE_NO_TITLE);

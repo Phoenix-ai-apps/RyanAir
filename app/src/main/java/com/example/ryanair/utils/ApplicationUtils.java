@@ -190,4 +190,40 @@ public class ApplicationUtils implements AppConstants {
         return conValue;
     }
 
+    public static String getPassengerText(int adult, int teen, int child, int infant){
+        String val = "";
+        if(adult > 1){
+            val =  adult + " Adults";
+        }else {
+            val = adult + " Adult";
+        }
+        if(teen >= 1 || child >= 1 || infant >= 1){
+            if(teen > 1){
+                val = val +", "+teen+" Teens";
+            }else if(teen == 1) {
+                val = val +", "+teen+" Teen";
+            }
+
+            if(child > 1){
+                val = val +", "+child+" Children";
+            }else if(child == 1) {
+                val = val +", "+child+" Child";
+            }
+
+            if(infant > 1){
+                val = val +", "+infant+" Infants";
+            }else if(infant == 1) {
+                val = val +", "+infant+" Infant";
+            }
+
+        }
+        return val;
+    }
+
+    public static String getRoundedFare(float fare){
+        String val="";
+        val = String.valueOf(Math.round(fare * 100.0) / 100.0);
+        return val;
+    }
+
 }
