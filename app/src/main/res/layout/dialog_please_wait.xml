@@ -29,16 +29,12 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_layout">
 
-                <com.airbnb.lottie.LottieAnimationView
+                <ProgressBar
                     android:id="@+id/la_loader"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="@dimen/_70sdp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_fileName="lottie_loader.json"
-                    app:lottie_loop="true"
-                    app:lottie_speed="1"/>
+                    android:layout_marginTop="@dimen/_10sdp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_message"

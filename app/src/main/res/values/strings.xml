@@ -5,16 +5,36 @@
     <string name="where_from">Where from?</string>
     <string name="where_to">Where to?</string>
     <string name="lets_go">Let\'s go</string>
+    <string name="search_flights">Search flights</string>
+    <string name="confirm">Confirm</string>
     <string name="fly_out">Fly Out</string>
     <string name="select_date">Select Date</string>
     <string name="search_city_or_airport">Search city or airport</string>
     <string name="select_origin">Search your origin</string>
+    <string name="ticket_summary">Ticket Summary</string>
+    <string name="origin">Origin</string>
+    <string name="infant_left">Infants left</string>
+    <string name="infant_error_msg">Infants cannot be greater than adults</string>
+    <string name="fare_class">Fare class</string>
+    <string name="discount_percent">Discount percent</string>
+    <string name="destination">Destination</string>
     <string name="select_destination">Search your destination</string>
     <string name="passengers">Passengers</string>
+    <string name="adults">Adults</string>
+    <string name="years_16">16+ years</string>
+    <string name="teens">Teens</string>
+    <string name="years_12_15">12-15 years</string>
+    <string name="children">Children</string>
+    <string name="years_2_11">2-11 years</string>
+    <string name="infants">Infants</string>
+    <string name="under_2">Under 2</string>
     <string name="adult_1_16_years">1 Adult (16+ years)</string>
     <string name="loading_please_wait">Processing your request please wait</string>
     <string name="no_internet">No Internet!</string>
+    <string name="no_flights_avl">No flights available on this date.</string>
     <string name="no_internet_msg">Please connect to internet and try again.</string>
     <string name="dismiss">Dismiss</string>
     <string name="something_went_wrong">Something went wrong. Try again.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

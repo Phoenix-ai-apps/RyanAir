@@ -26,7 +26,6 @@ public interface ApiInterface {
                             @Query("teen") int teen,
                             @Query("inf") int inf,
                             @Query("ToUs") String toUs,
-                            @Query("Disc") int disc,
-                            @Query("datein") String dateIn);
+                            @Query("Disc") int disc);
 
 }

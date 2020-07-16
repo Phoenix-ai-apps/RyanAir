@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="fare"
+            type="String" />
+        <variable
+            name="date"
+            type="String" />
+
+        <variable
+            name="currency"
+            type="String" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{date}'
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fare"
+            android:layout_below="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{fare ?? "No flight"}'
+            android:textSize="@dimen/_15sdp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_currency"
+            android:layout_below="@+id/tv_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{currency}'
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <View
+            android:id="@+id/vw0"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"/>
+
+    </RelativeLayout>
+</layout>

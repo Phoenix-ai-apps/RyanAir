@@ -8,7 +8,7 @@ import java.util.List;
 public class Flight implements Parcelable {
     private String termsOfUse;
     private String currency;
-    private int currPrecision;
+    private int    currPrecision;
     private String routeGroup;
     private String tripType;
     private String upgradeType;

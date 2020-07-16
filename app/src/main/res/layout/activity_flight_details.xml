@@ -10,19 +10,17 @@
 
         <include
             android:id="@+id/inc_toolbar"
-            layout="@layout/toolbar_custom"
+            layout="@layout/toolbar_flight_details"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_station"
-            android:layout_below="@+id/inc_toolbar"
+        <include
+            layout="@layout/content_frag"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"/>
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigation"
+            android:layout_below="@+id/inc_toolbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     </RelativeLayout>
 </layout>

@@ -7,9 +7,8 @@ import android.view.View;
 
 import com.example.ryanair.R;
 import com.example.ryanair.databinding.ActivityHomeBinding;
-import com.example.ryanair.databinding.ActivityMainBinding;
 import com.example.ryanair.interfaces.ToolbarListener;
-import com.example.ryanair.ui.fragments.homeFragment.HomeFragment;
+import com.example.ryanair.ui.fragments.homeActivity.HomeFragment;
 
 public class HomeActivity extends BaseActivity implements ToolbarListener, View.OnClickListener {
     private static final String TAG = HomeActivity.class.getSimpleName();
